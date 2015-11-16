@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2015-09-11 09:52:03
+Date: 2015-11-16 15:23:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,4 +30,13 @@ CREATE TABLE `user_role` (
 -- Records of user_role
 -- ----------------------------
 INSERT INTO `user_role` VALUES ('1', '1', '1');
+INSERT INTO `user_role` VALUES ('10', '10', '1');
+INSERT INTO `user_role` VALUES ('11', '11', '2');
 INSERT INTO `user_role` VALUES ('2', '2', '1');
+INSERT INTO `user_role` VALUES ('3', '3', '2');
+INSERT INTO `user_role` VALUES ('4', '4', '1');
+INSERT INTO `user_role` VALUES ('5', '5', '2');
+INSERT INTO `user_role` VALUES ('6', '6', '1');
+INSERT INTO `user_role` VALUES ('7', '7', '1');
+INSERT INTO `user_role` VALUES ('8', '8', '1');
+INSERT INTO `user_role` VALUES ('9', '9', '2');

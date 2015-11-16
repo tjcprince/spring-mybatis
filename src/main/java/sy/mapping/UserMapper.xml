@@ -81,6 +81,6 @@
   	<collection property="userRoles" column="id" javaType="list" select="selectUserRole"></collection>
   </resultMap>
    <select id="getAllUser" resultMap="userResultMap">
-  	select id, name, age from user 
+  	select id, name, age from user order by id+0
   </select>
 </mapper>

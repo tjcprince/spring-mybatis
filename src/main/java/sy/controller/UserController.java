@@ -1,5 +1,7 @@
 package sy.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 import sy.jdbc.UserJdbc;
 import sy.modle.TestXmlModle;
@@ -73,5 +78,41 @@ public class UserController {
 		mav.addObject("xmlModle", xmlModle);
 		logger.info(mav.toString());
 		return mav;
+	}
+	/**
+	 * 分页插件使用
+	 * @param id
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/page")
+	public ModelAndView page(HttpServletRequest request){
+		ModelAndView mav=new ModelAndView("page");
+		
+		PageHelper.startPage(1, 4);
+		List<User> list = userService.getAllUser();
+		//用PageInfo对结果进行包装
+		PageInfo page = new PageInfo(list);
+		//测试PageInfo全部属性
+		//PageInfo包含了非常全面的分页属性
+		System.out.println(page.getPageNum());//当前是第几页
+		System.out.println(page.getPageSize());//每页条数
+		System.out.println(page.getStartRow());//开始行
+		System.out.println(page.getEndRow());//结束行
+		System.out.println(page.getTotal());//总数
+		System.out.println(page.getPages());//一共多少页
+		System.out.println(page.getFirstPage());//第一页
+		System.out.println(page.getLastPage());//最后一页
+		System.out.println(page.isIsFirstPage());//是否是第一页
+		System.out.println(page.isIsLastPage());//是否是最后一页
+		System.out.println(page.isHasPreviousPage());//是否有上一页
+		System.out.println(page.isHasNextPage());//是否有下一页
+		for(int i=0;i<list.size();i++){
+			User u=(User)list.get(i);
+			System.out.println(u.getName());
+		}
+        mav.addObject("list", list);
+        mav.addObject("page", page);
+        return mav;
 	}
 }

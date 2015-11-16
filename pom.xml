@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <properties>
         <spring.version>4.1.0.RELEASE</spring.version><!-- spring -->
-        <mybatis.version>3.2.6</mybatis.version><!-- mybatis -->
+        <mybatis.version>3.2.8</mybatis.version><!-- mybatis -->
         <pagehelper.version>4.0.3</pagehelper.version><!-- mybatis 分页插件 -->
         <mysql.version>5.1.29</mysql.version><!-- mysql -->
         <ojdbc14.version>10.2.0.4.0</ojdbc14.version><!-- oracle -->
