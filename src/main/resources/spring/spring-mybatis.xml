@@ -78,6 +78,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<!-- 多个包时候，就以逗号分隔。如 sy.dao,sy.dao1-->
 		<property name="basePackage" value="sy.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
