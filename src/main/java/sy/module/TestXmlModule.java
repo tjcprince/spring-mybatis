@@ -1,9 +1,9 @@
-package sy.modle;
+package sy.module;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class TestXmlModle {
+public class TestXmlModule {
 	
 	private String id;
 	

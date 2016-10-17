@@ -65,7 +65,7 @@
 			          <bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">  
 			             <property name="classesToBeBound">  
 			              <list>  
-			                 <value>sy.modle.TestXmlModle</value>
+			                 <value>sy.module.TestXmlModule</value>
 			              </list>  
 			             </property>  
 			          </bean>  
